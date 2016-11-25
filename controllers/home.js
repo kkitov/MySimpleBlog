@@ -6,5 +6,8 @@ module.exports = {
       Article.find({}).limit(6).populate('author').then(articles => {
           res.render('home/index', {articles: articles});
       })
-  }
+  },
+    contactsGet: (req, res) => {
+        res.render('contacts');
+    }
 };
